@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Net 4 U - CableNet LLC - MikroTik and WiFi Hotspot Management Software with Billing and Complaint Management</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect.
+  -->
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="skin-blue layout-top-nav">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../../index2.html" class="navbar-brand">NET 4 U</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-collapse pull-left collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+          <form class="navbar-left" role="search">
+            <div class="form-group" style="margin: 8px 0px;">
+              <input class="form-control" id="navbar-search-input" placeholder="Search" type="text">
+            </div>
+          </form>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+
+            <!-- Customers dropdown navigation -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-users"></i> <span class="hidden-xs">Customers</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="employee-customers.html">
+                      <i class="fa fa-users"></i> All Customers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-online.html">
+                      <i class="fa fa-users text-green"></i> Online Customers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-tickets.html">
+                      <i class="fa fa-ticket text-yellow"></i> Tickets
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-customer-leads.html">
+                      <i class="fa fa-list text-red"></i> Leads
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-customer-invoices.html">
+                      <i class="fa fa-file-text-o"></i> Invoices
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-customer-payments.html">
+                      <i class="fa fa-credit-card text-green"></i> Payments
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-zones.html">
+                      <i class="fa fa-circle-o-notch"></i> Zones
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-nodes.html">
+                      <i class="fa fa-sitemap"></i> Nodes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-packages.html">
+                      <i class="fa fa-dropbox"></i> Packages
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-voucher-batches.html">
+                      <i class="fa fa-money text-green"></i> Voucher Batches
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-vouchers.html">
+                      <i class="fa fa-money text-green"></i> Voucher
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        <!-- Reports navigation -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-clipboard"></i> <span class="hidden-xs">Reports</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="employee-select-customers.html">
+                      <i class="fa fa-users text-aqua"></i> Customers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-online-customers.html">
+                      <i class="fa fa-users text-green"></i> Online Customers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-invoices.html">
+                      <i class="fa fa-file-text-o"></i> Invoices
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-payments.html">
+                      <i class="fa fa-money text-green"></i> Payments
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-package-sales.html">
+                      <i class="fa fa-cart-arrow-down"></i> Package Sales
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-balance-refills.html">
+                      <i class="fa fa-refresh text-aqua"></i> Balance Refills
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-sms-alerts.html">
+                      <i class="fa fa-mobile-phone"></i> SMS Alerts
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-select-audit-trail.html">
+                      <i class="fa fa-list"></i> Audit Trail
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-access-requests.html">
+                      <i class="fa fa-inbox text-aqua"></i> Customer Access Requests
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        <!-- Admin navigation -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-user"></i> <span class="hidden-xs">Admin</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="employee-location-users.html">
+                      <i class="fa fa-users text-aqua"></i> Users
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-ticket-templates.html">
+                      <i class="fa fa-file-text-o text-green"></i> Ticket Templates
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-nas-devices.html">
+                      <i class="fa fa-television"></i> NAS Devices
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-ip-pools.html">
+                      <i class="fa fa-list"></i> IP Pools
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee-location-settings.html">
+                      <i class="fa fa-gear"></i> Settings
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">Sheetal Dalhobkar</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header">
+                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                  <p>
+                    Sheetal Dalhobkar - Web Developer
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="employee-dashboard.html">Location Dashboard</a>
+                    </div>
+                    <div class="col-xs-4 col-xs-offset-4 text-center">
+                      <a href="employee-change-password.html">Change Password</a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="employee-profile.html" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+    <h3>Show Settings</h3>
+
+      <div class="row">
+      	<div class="col-xs-12 col-md-8 col-md-offset-2">
+      		<div class="box box-info">
+      			<div class="box-header with-border">
+      			</div>
+
+      			<form class="form-horizontal">
+      				<div class="box-body">
+        					<div class="form-group">
+                    <label for="input_auto_tickets" class="col-md-3 control-label">Auto Assign Tickets</label>
+
+                    <div class="col-md-9">
+                      <input id="input_auto_tickets" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <label for="input_due_days" class="col-md-3 control-label">Tickets Due In Days</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_due_days" value="1" placeholder="Tickets Due In Days" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_balance" class="col-md-3 control-label">Auto Generate Invoices</label>
+
+                  <div class="col-md-9">
+                    <input id="input_balance" disabled="" type="checkbox">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_invoice_due_days" class="col-md-3 control-label">Invoices Due In Days</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_invoice_due_days" value="1" placeholder="Invoice Due In Days" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_display_rows_per_page" class="col-md-3 control-label">Display Rows Per Page</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_display_rows_per_page" value="20" placeholder="Display Rows Per Page" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_allow_renewal_voucher" class="col-md-3 control-label">Allow Renewal By Voucher</label>
+
+                  <div class="col-md-9">
+                    <input id="input_allow_renewal_voucher" checked="checked" disabled="" type="checkbox">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_default_voucher_type" class="col-md-3 control-label">Default Voucher Type</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_default_voucher_type" value="Pin" placeholder="Default Voucher Type" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_allow_renewal_online_payment" class="col-md-3 control-label">Allow Renewal By Online Payment</label>
+
+                  <div class="col-md-9">
+                    <input id="input_allow_renewal_online_payment" disabled="" type="checkbox">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_allow_customers_change_password" class="col-md-3 control-label">Allow Customers to Change Password</label>
+
+                  <div class="col-md-9">
+                    <input id="input_allow_customers_change_password" disabled="" checked="checked" type="checkbox">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_time_zone" class="col-md-3 control-label">Time Zone</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_time_zone" value="Asia/Kolkata" placeholder="Time Zone" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_calling_code" class="col-md-3 control-label">Country Calling Code</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_calling_code" value="91" placeholder="Calling Code" type="text">
+                  </div>
+                </div>
+
+      				</div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+      			</form>
+      		</div>
+      	</div>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="box box-info collapsing-boxes">
+            <div class="box-header with-border">
+            <h3 class="box-title">Hotspot</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus collapsing-icon"></i></button>
+              </div>
+            </div>
+
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                    <label for="input_allow_hotspot" class="col-md-3 control-label">Allow Hotspot Customers</label>
+
+                    <div class="col-md-9">
+                      <input id="input_allow_hotspot" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <label for="input_default_package" class="col-md-3 control-label">Default Package</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_default_package" value="WIFI_DEMO_NET4U" placeholder="Default Package" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_default_password" class="col-md-3 control-label">Default Password</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_default_password" placeholder="Default Password" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_prefix_username" class="col-md-3 control-label">Prefix For Username</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_prefix_username" placeholder="Prefix For Username" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_url_login" class="col-md-3 control-label">URL After Login</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_url_login" placeholder="URL After Login" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_url_login" class="col-md-3 control-label">Sign Up Terms</label>
+
+                  <div class="col-md-9">
+                    <textarea id="input_url_login" class="form-control" rows="3" placeholder="Sign Up Terms"></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="box box-info collapsing-boxes">
+            <div class="box-header with-border">
+            <h3 class="box-title">Billing</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus collapsing-icon"></i></button>
+              </div>
+            </div>
+
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                    <label for="input_service_tax_number" class="col-md-3 control-label">Service Tax Number</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_default_package" value="WIFI_DEMO_NET4U" placeholder="Service Tax Number" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <label for="input_service_tax_rate" class="col-md-3 control-label">Service Tax Rate</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_service_tax_rate" value="15.000%" placeholder="Service Tax Rate" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_vat_rate" class="col-md-3 control-label">VAT Rate</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_vat_rate" value="0.000%" placeholder="VAT Rate" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_invoice_terms" class="col-md-3 control-label">Invoice Terms</label>
+
+                  <div class="col-md-9">
+                    <textarea id="input_invoice_terms" class="form-control" rows="3" placeholder="Invoice Terms"></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="box box-info collapsing-boxes">
+            <div class="box-header with-border">
+            <h3 class="box-title">Payment Gateway</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus collapsing-icon"></i></button>
+              </div>
+            </div>
+
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                    <label for="input_payment_gateway" class="col-md-3 control-label">Payment Gateway</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_payment_gateway" placeholder="Payment Gateway" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <label for="input_merchant_key" class="col-md-3 control-label">Merchant Key</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_merchant_key" placeholder="Merchant Key" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_vat_rate" class="col-md-3 control-label">Merchant Salt</label>
+
+                  <div class="col-md-9">
+                    <input class="form-control" disabled="" id="input_vat_rate" placeholder="Merchant Salt" type="text">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="box box-info collapsing-boxes">
+            <div class="box-header with-border">
+            <h3 class="box-title">SMS Alerts</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus collapsing-icon"></i></button>
+              </div>
+            </div>
+
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                    <label for="input_sender_identifier" class="col-md-3 control-label">SMS Sender Identifier</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_sender_identifier" value="NETFOR" placeholder="SMS Sender Identifier" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="input_alert_ticket_assigned" class="col-md-3 control-label">Send Alert For Ticket Assigned</label>
+
+                    <div class="col-md-9">
+                      <input id="input_alert_ticket_assigned" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="input_alert_package_renewal" class="col-md-3 control-label">Send Alert For Package Renewal/Change</label>
+
+                    <div class="col-md-9">
+                      <input id="input_alert_package_renewal" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_alert_data_limit" class="col-md-3 control-label">Send Alert For Data Limit</label>
+
+                    <div class="col-md-9">
+                      <input id="input_alert_data_limit" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_alert_expiry_date" class="col-md-3 control-label">Send Alert For Expiry Date</label>
+
+                    <div class="col-md-9">
+                      <input id="input_alert_expiry_date" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_use_msg91" class="col-md-3 control-label">Use My MSG91 SMS Gateway</label>
+
+                    <div class="col-md-9">
+                      <input id="input_use_msg91" disabled="" type="checkbox">
+                    </div>
+                  </div>
+
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="box box-info collapsing-boxes">
+            <div class="box-header with-border">
+            <h3 class="box-title">Address</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus collapsing-icon"></i></button>
+              </div>
+            </div>
+
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                    <label for="input_address_1" class="col-md-3 control-label">Address Line 1</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_address_1" value="6,Sunita Apt,Shanti Nagar,Mulund(W)" placeholder="Address Line 1" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="input_address_2" class="col-md-3 control-label">Address Line 2</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_address_2" value="Mumbai - 400078" placeholder="Address Line 2" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="input_city" class="col-md-3 control-label">City</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_city" value="Mumbai" placeholder="City" type="text">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_state" class="col-md-3 control-label">State</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_state" value="Maharashtra" placeholder="State" type="text">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_country" class="col-md-3 control-label">Country</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_country" value="India" placeholder="Country" type="text">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_zip" class="col-md-3 control-label">ZIP</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_zip" value="400087" placeholder="ZIP" type="text">
+                    </div>
+                  </div>
+
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <div class="box box-info collapsing-boxes">
+            <div class="box-header with-border">
+            <h3 class="box-title">Contact Information</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus collapsing-icon"></i></button>
+              </div>
+            </div>
+
+            <form class="form-horizontal">
+              <div class="box-body">
+                  <div class="form-group">
+                    <label for="input_phone_1" class="col-md-3 control-label">Phone1</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_phone_1" value="9819387561" placeholder="Phone1" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="input_phone_2" class="col-md-3 control-label">Phone2</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_phone_2" value="9819387561" placeholder="Phone2" type="text">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="input_email_1" class="col-md-3 control-label">Email1</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_email_1" value="manoj.shrii@gmail.com" placeholder="Email1" type="text">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input_email_2" class="col-md-3 control-label">Email2</label>
+
+                    <div class="col-md-9">
+                      <input class="form-control" disabled="" id="input_email_2" value="support@net4u.online" placeholder="Email2" type="text">
+                    </div>
+                  </div>
+
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-warning">Edit</button>
+
+                <div class="pull-right">
+                  <button type="submit" class="btn bg-navy">Save</button>
+                  <button type="submit" class="btn btn-success">Save All</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      <a href="/">Home</a>
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2017 <a href="http://xceednet.com">XceedNet.com</a>.</strong> All rights reserved.
+  </footer>
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+
+<script type="text/javascript">
+  var collapsing_boxes = $('.collapsing-boxes');
+  var collapsing_icons = $('.collapsing-icon');
+  collapsing_boxes.addClass('collapsed-box');
+</script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+</html>
